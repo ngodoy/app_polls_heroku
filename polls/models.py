@@ -36,5 +36,5 @@ class QuestionForm(ModelForm):
         fields = ['question_text', 'pub_date',]
 	widgets = { 
             'pub_date': TextInput(attrs={ 
-                                     'placeholder':'dd/mm/yyyy hh:mm:ss'}),
+                                     'placeholder':'mm/dd/yyyy hh:mm:ss'}),
         }
