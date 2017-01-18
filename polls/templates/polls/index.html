@@ -9,7 +9,7 @@
     {% for question in latest_question_list %}
 
 <a data-toggle="modal"  class="list-group-item"  href="{% url 'polls:detail' question.id %}" data-target="#myModal{{question.id}}">
-{{ question.question_text }} - {{question.num_choices}}</a>
+{{ question.question_text }} {% if question.num_choices %} - {{question.num_choices}} {% endif %} </a>
 <div class="modal fade" id="myModal{{question.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
